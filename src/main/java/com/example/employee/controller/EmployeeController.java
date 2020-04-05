@@ -27,11 +27,19 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeRepositoryCustom employeeRepositoryImpl;
 		
+	/*
+	 * this is for testing services
+	 */
 	@RequestMapping("/welcome")
 	public String welcomeEmployee() {
 		return "Welcome Sachin";
 	}
 	
+	/**
+	 * 
+	 * @param emp it will take employee reference 
+	 * @return message of the successfully saved
+	 */
 	@RequestMapping(method = RequestMethod.POST,value="/addemployee")
 	public String addEmployee(@RequestBody Employee emp) {
 		emp.setDate();

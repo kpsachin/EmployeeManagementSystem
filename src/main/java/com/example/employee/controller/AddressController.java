@@ -16,6 +16,11 @@ public class AddressController {
 	@Autowired
 	private IAddressService addressService;
 	
+	/**
+	 * 
+	 * @param address it will take reference from the request
+	 * @return message of successfully add the address
+	 */
 	@RequestMapping(method = RequestMethod.POST,value = "/addaddress")
 	public String addAddress(@RequestBody Address address) {
 		 addressService.addAddress(address);
